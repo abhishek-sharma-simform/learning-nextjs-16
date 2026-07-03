@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "My App layout",
@@ -14,7 +15,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header style={{ backgroundColor: "red", padding: "1rem" }}>
-          This is header
+          <ul>
+            <li>
+              <Link href={"/"}>Home</Link>
+            </li>
+            <li>
+              <Link href={"/products"}>Product</Link>
+            </li>
+          </ul>
         </header>
         {children}
         <footer style={{ backgroundColor: "red", padding: "1rem" }}>
