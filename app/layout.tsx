@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "My App layout",
+  description: "This is my app layout",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
