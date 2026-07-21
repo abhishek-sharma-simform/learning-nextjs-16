@@ -2,6 +2,9 @@
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+const About = dynamic(() => import("../about/page"));
+
 const Article = () => {
   const router = useRouter();
   const artiles = [
@@ -28,6 +31,9 @@ const Article = () => {
       >
         Programatically navigation
       </button>
+      <div>
+        <About />
+      </div>
     </>
   );
 };
